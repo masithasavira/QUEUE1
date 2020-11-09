@@ -1,0 +1,71 @@
+public class NilaiMatkul1 {
+    private String nim;
+    private String nama;
+    private double nilai;
+    
+    NilaiMatkul(){
+        
+    }
+    void setNim(String nim){
+        this.nim = nim;
+        
+    }
+    String getNim(){
+        return nim;
+    }  
+    void setNama(String nama){
+        this.nama = nama;
+        
+    }
+    String getNama(){
+        return nama;
+    }
+    void setNilai(double nilai){
+        this.nilai = nilai;
+    }
+    double getNilai(){
+        return nilai;
+    }
+}
+void printQueue(){
+        if(first != -1){
+            System.out.println("~~~~~~~~~~~~~~~ISI QUEUE~~~~~~~~~~~~~~~");
+            int i;
+            for(i=last;i>=first;i--){
+            System.out.println("=======================================");
+            System.out.println("Elemen Ke-"+i);
+            System.out.println("NIM     : "+data[i].getNim());
+            System.out.println("Nama    : "+data[i].getNama());
+            System.out.println("Nilai   : "+data[i].getNilai());
+
+            }
+        }
+        else{
+            /*Proses Jika Queue Kosong*/
+            System.out.println("Queue-nya Kosong");
+
+        }
+    }
+}
+public class QueueStatis {
+    public static void main(String[] args){
+        Queue Q = new Queue();
+        Q.createEmpty();
+        Q.printQueue();
+        
+        System.out.println("=======================================");
+
+        Q.add("E31200782", "Masitha Savira", 99.00);
+        Q.add("E41200058", "Helen indhayani", 95.00);
+        Q.add("E31201887", "Fathur Rochman Zainul", 90.50);
+        
+        Q.printQueue();
+        System.out.println("=======================================");
+        
+        Q.del();
+        Q.del();
+        Q.printQueue();
+
+        System.out.println("=======================================");
+    }
+}
